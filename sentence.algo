@@ -1,0 +1,25 @@
+ALGORITHM sentence
+VAR
+ nbv, nbw, nbc := INTEGER;
+ sentc := STRING[] ;
+
+BEGIN
+ nb_consonant := 0;
+ nb_words := 1;
+ nb_vowel := 0;
+ write ("type sentence :");
+ read (sentc);
+
+REPEAT
+
+ IF (sentc[nb_consonant] in ["a","e","u","i","o","y",]) THEN
+  nb_vowel:= nb_consonant+1;
+ END_IF
+
+ nb_consonant= nb_consonant+1;
+
+UNTIL (sentc[nb_consonant] = ".")
+ write ("the number of characters are" + nb_consonant + 1);
+ write ("the number of words are" + nb_words); 
+ write ("the number of vowel are" + nb_vowel); 
+END
